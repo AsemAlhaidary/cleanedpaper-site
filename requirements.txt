@@ -1,0 +1,21 @@
+asgiref @ file:///C:/Users/BUILDE~1/AppData/Local/Temp/abs_cchykh5sgr/croots/recipe/asgiref_1661287542702/work
+bleach==6.0.0
+crispy-bootstrap5==0.7
+Django @ file:///C:/Users/BUILDE~1/AppData/Local/Temp/abs_eeor5o9jj8/croots/recipe/django_1661292534510/work
+django-crispy-forms==2.0
+django-debug-toolbar==4.2.0
+django-jazzmin==2.6.0
+django-rename-app==0.1.6
+django-robots==6.1
+django-summernote==0.8.20.0
+importlib-metadata==6.8.0
+Markdown==3.4.4
+mysqlclient==2.2.0
+Pillow==10.0.0
+python-decouple==3.8
+six==1.16.0
+sqlparse @ file:///C:/b/abs_88361ub_qu/croot/sqlparse_1690904577514/work
+tzdata @ file:///croot/python-tzdata_1690578112552/work
+webencodings==0.5.1
+whitenoise==6.6.0
+zipp==3.16.2
