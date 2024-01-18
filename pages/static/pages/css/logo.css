@@ -1,12 +1,10 @@
-.logopreload{
-	font-size:15px;
-	color:black;
-	letter-spacing:0px;
-	font-weight:800;
-}
-
-.logote{
-	font-size: 20px;
-	letter-spacing: 1px;
-	font-weight: 800;
+.logo{
+    font-size: 1.5em;
+    color: var(--accent) !important;
+    font-family: "Elnath";
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

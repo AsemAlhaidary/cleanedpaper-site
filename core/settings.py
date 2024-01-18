@@ -36,7 +36,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-SITE_ID = 1 # Fix "DoesNotExist at /sitemap.xml"
+SITE_ID = 1  # Fix "DoesNotExist at /sitemap.xml"
 
 INSTALLED_APPS = [
     'jazzmin',

@@ -1,4 +1,113 @@
 {% load static %}
+{% load i18n %}
+
+{% comment %} <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PJ63XNTB');</script>
+<!-- End Google Tag Manager --> {% endcomment %}
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0" />
+<meta name="Content-Language" content="{{ page.language }}" />
+<link rel="alternate" href="URL_of_alternate_page" hreflang="{{ page.language }}">
+
+<meta http-equiv="imagetoolbar" content="no" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="CACHE-CONTROL" content="Public" />
+<meta http-equiv="PRAGMA" content="Cache-Control" />
+
+<!-- META http-equiv="EXPIRES" content="Sun, 01 Jul 2012 00:00:01 GMT" / -->
+<meta name="DC.creator" content="{{ site.author.name }} - {{ site.url }}" />
+<meta name="DC.language" content="{{ page.language }}" />
+<meta name="copyright" content="Copyright {{ site.created_at }}" />
+<meta name="keywords" content="{{ page.keywords }}" />
+<meta name="title" content="{{ page.meta_title }}" />
+<meta name="description" content="{{ page.summary }}" />
+<meta name="Author" content="{{ site.author.name }}" />
+<meta name="revisit-after" content="7 days" />
+<meta name="distribution" content="global" />
+<meta name="rating" content="general" />
+<meta name="robots" content="ALL" />
+
+<!-- (Robot commands: All, None, Index, No Index, Follow, No Follow) -->
+<meta name="GOOGLEBOT" content="FOLLOW" />
+<meta name="robots" content="index, follow">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="viewport-fit=cover, initial-scale=1, minimum-scale=1" />
+
+<meta property="og:site_name" content="{{ page.meta_title }}" />
+<meta property="og:locale" content="{{ page.language }}" />
+
+<meta property="article:tag" content="{{ page.keywords }}" />
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="{{ site.url }}" />
+<meta property="og:type" content="{{ page.type }}" />
+<meta property="og:title" content="{{ page.title }}" /> <!-- only if post, other site title -->
+<meta property="og:description" content="{{ page.summary }}" />
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:title" content="{{ page.meta_title }}" />
+<meta name="twitter:url" content="{{ site.url }}" />
+<meta name="twitter:description" content="{{ page.summary }}" />
+
+<!-- Sets whether a web application runs in full-screen mode.
+See: https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html#//apple_ref/doc/uid/TP40008193-SW3 -->
+<meta name="apple-mobile-web-app-capable" content="no" />
+<meta name="mobile-web-app-capable" content="no" />
+
+<!-- Sets the style of the status bar for a web application.
+See: https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html#//apple_ref/doc/uid/TP40008193-SW4 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="{{ theme.color_palette.light.primary }}" />
+
+<!-- Sets the tab bar to match the site's color/theme.
+See: https://developer.apple.com/safari/technology-preview/release-notes/ -->
+<meta name="theme-color" content="{{ theme.color_palette.light.primary }}" />
+<meta name="msapplication-navbutton-color" content="{{ theme.color_palette.light.primary }}" />
+
+<!-- Sets the display title of a web app (undocumented by Apple).
+See: http://www.mobilexweb.com/blog/iphone-5-ios-6-html5-developers -->
+<meta name="apple-mobile-web-app-title" content="{{ page.meta_title }}" />
+
+<!-- Possible values are: "portrait", "portrait-upside-down", "landscape-right", "landscape-left", "portrait-any"
+See: https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/HTMLMetaElement.cpp#L79
+See: http://www.opensource.apple.com/source/WebCore/WebCore-855.7.1/html/HTMLMetaElement.cpp
+See: https://trac.webkit.org/changeset/160679/trunk/Source/WebCore/dom/Document.cpp
+See: https://trac.webkit.org/browser/trunk/Source/WebCore/ChangeLog?rev=160679 -->
+<meta name="apple-mobile-web-app-orientations" content="portrait, landscape-right" />
+
+<!-- Disables automatic detection of possible phone numbers in a webpage in Safari on iOS.
+See: https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html#//apple_ref/doc/uid/TP40008193-SW5
+See: https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html#//apple_ref/html/const/format-detection -->
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="address=no"/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="{% static 'pages/favicon_io/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'pages/favicon_io/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'pages/favicon_io/favicon-16x16.png' %}">
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'pages/favicon_io/favicon.ico' %}">
+<link rel="manifest" href="{% static 'pages/favicon_io/site.webmanifest' %}">
+
+<style>
+  :root {
+    --accent: {{ theme.color_palette.general.accent }};
+  }
+
+  html[data-theme="light"] {
+    --primary: {{ theme.color_palette.light.primary }};
+    --secondary: {{ theme.color_palette.light.secondary }};
+    --primary-text: {{ theme.color_palette.light.primary_text }};
+    --secondary-text: {{ theme.color_palette.light.secondary_text }};
+    --secondary-transparent: {{ theme.color_palette.light.secondary_transparent }};
+    --shadow-color: {{ theme.color_palette.light.shadow }};
+  }
+</style>
+{% comment %} {% load static %}
 
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -6,7 +115,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="manifest" href="site.html">
-<link rel="shortcut icon" type="image/x-icon" href="{% static 'pages/img/favicon.ico' %}">
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'pages/img/favicon.ico' %}"> {% endcomment %}
 
 <!-- CSS here -->
 <link rel="stylesheet" href="{% static 'pages/css/bootstrap.min.css' %}">
